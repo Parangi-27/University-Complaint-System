@@ -11,11 +11,14 @@ namespace Project.Models
     public class Complaint
     {
         [Key]
-        public int uId { get; set; }
+        public int Id { get; set; }
 
         [Required]
-        public string cType { get; set; }
+        public string? Title { get; set; } = string.Empty;
+
         [Required]
-        public string cDes { get; set; }
+        public string? Complain { get; set; } = string.Empty;
+        public int UserId { get; set; }
+        public User? User { get; set; }
     }
 }

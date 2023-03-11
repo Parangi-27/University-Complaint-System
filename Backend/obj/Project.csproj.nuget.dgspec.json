@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\WSD\\University-Complaint-System\\Project.csproj": {}
+    "E:\\WSD\\Project\\Project\\Project.csproj": {}
   },
   "projects": {
-    "E:\\WSD\\University-Complaint-System\\Project.csproj": {
+    "E:\\WSD\\Project\\Project\\Project.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\WSD\\University-Complaint-System\\Project.csproj",
+        "projectUniqueName": "E:\\WSD\\Project\\Project\\Project.csproj",
         "projectName": "Project",
-        "projectPath": "E:\\WSD\\University-Complaint-System\\Project.csproj",
+        "projectPath": "E:\\WSD\\Project\\Project\\Project.csproj",
         "packagesPath": "C:\\Users\\Parangi\\.nuget\\packages\\",
-        "outputPath": "E:\\WSD\\University-Complaint-System\\obj\\",
+        "outputPath": "E:\\WSD\\Project\\Project\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Parangi\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,6 +40,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[6.0.13, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[7.0.3, )"
@@ -71,6 +75,14 @@
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.2.3, )"
+            },
+            "Swashbuckle.AspNetCore.Filters": {
+              "target": "Package",
+              "version": "[7.0.6, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.27.0, )"
             }
           },
           "imports": [

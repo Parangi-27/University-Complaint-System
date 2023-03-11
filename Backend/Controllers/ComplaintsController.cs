@@ -22,16 +22,16 @@ namespace Project.Controllers
 
         // GET: api/Complaints
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Complaint>>> GetComplaint()
+        public async Task<ActionResult<IEnumerable<Complaint>>> GetComplaints()
         {
-            return await _context.Complaint.ToListAsync();
+            return await _context.Complaints.ToListAsync();
         }
 
         // GET: api/Complaints/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Complaint>> GetComplaint(int id)
         {
-            var complaint = await _context.Complaint.FindAsync(id);
+            var complaint = await _context.Complaints.FindAsync(id);
 
             if (complaint == null)
             {
@@ -46,7 +46,7 @@ namespace Project.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> PutComplaint(int id, Complaint complaint)
         {
-            if (id != complaint.uId)
+            if (id != complaint.Id)
             {
                 return BadRequest();
             }
@@ -77,23 +77,23 @@ namespace Project.Controllers
         [HttpPost]
         public async Task<ActionResult<Complaint>> PostComplaint(Complaint complaint)
         {
-            _context.Complaint.Add(complaint);
+            _context.Complaints.Add(complaint);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetComplaint", new { id = complaint.uId }, complaint);
+            return CreatedAtAction("GetComplaint", new { id = complaint.Id }, complaint);
         }
 
         // DELETE: api/Complaints/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteComplaint(int id)
         {
-            var complaint = await _context.Complaint.FindAsync(id);
+            var complaint = await _context.Complaints.FindAsync(id);
             if (complaint == null)
             {
                 return NotFound();
             }
 
-            _context.Complaint.Remove(complaint);
+            _context.Complaints.Remove(complaint);
             await _context.SaveChangesAsync();
 
             return NoContent();
@@ -101,7 +101,7 @@ namespace Project.Controllers
 
         private bool ComplaintExists(int id)
         {
-            return _context.Complaint.Any(e => e.uId == id);
+            return _context.Complaints.Any(e => e.Id == id);
         }
     }
 }

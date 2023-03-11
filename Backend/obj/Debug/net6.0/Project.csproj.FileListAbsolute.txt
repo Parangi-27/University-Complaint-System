@@ -287,3 +287,7 @@ E:\WSD\Project\Project\bin\Debug\net6.0\runtimes\unix\lib\net6.0\System.Drawing.
 E:\WSD\Project\Project\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
 E:\WSD\Project\Project\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 E:\WSD\Project\Project\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+E:\WSD\Project\Project\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+E:\WSD\Project\Project\bin\Debug\net6.0\Scrutor.dll
+E:\WSD\Project\Project\bin\Debug\net6.0\Swashbuckle.AspNetCore.Filters.dll
+E:\WSD\Project\Project\bin\Debug\net6.0\Swashbuckle.AspNetCore.Filters.Abstractions.dll

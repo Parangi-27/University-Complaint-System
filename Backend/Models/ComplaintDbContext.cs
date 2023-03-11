@@ -1,9 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Project.Models;
 
 namespace Project.Models
 {
@@ -13,18 +8,17 @@ namespace Project.Models
         {
         
         }
-        public DbSet<UserProfile> Users { get; set; }
-        //public DbSet<Complaint> Complaints { get; set; }
-        //public DbSet<CompUser> CompUsers { get; set; }
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlServer(@"Server=(localdb)\MSSQLLocalDB;Database=Complain;Trusted_Connection=True");
+        }
 
-       protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-       {
-           optionsBuilder.UseSqlServer("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=UniComplaint;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
-       }
-        //public DbSet<Complaint> Complaints { get; set; }
-        //public DbSet<CompUser> CompUsers { get; set; }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
 
-       public DbSet<Project.Models.Complaint> Complaint { get; set; }
+        }
+        public DbSet<User> Users => Set<User>();
 
+        public DbSet<Complaint> Complaints => Set<Complaint>();
     }
 }
