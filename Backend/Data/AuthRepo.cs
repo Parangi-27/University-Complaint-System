@@ -2,10 +2,10 @@
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using Microsoft.IdentityModel.Tokens;
-using Project.Data;
-using Project.Models;
+using UniComplaint.Data;
+using UniComplaint.Models;
 
-namespace Project.Data
+namespace UniComplaint.Data
 {
     public class AuthRepo : IAuthrepo
     {

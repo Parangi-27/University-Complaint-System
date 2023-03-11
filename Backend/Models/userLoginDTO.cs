@@ -1,4 +1,4 @@
-﻿namespace Project.Models
+﻿namespace UniComplaint.Models
 {
     public class userLoginDTO
     {

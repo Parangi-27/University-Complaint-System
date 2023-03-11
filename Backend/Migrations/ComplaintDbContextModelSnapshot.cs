@@ -3,11 +3,11 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using Project.Models;
+using UniComplaint.Models;
 
 #nullable disable
 
-namespace Project.Migrations
+namespace UniComplaint.Migrations
 {
     [DbContext(typeof(ComplaintDbContext))]
     partial class ComplaintDbContextModelSnapshot : ModelSnapshot
@@ -21,7 +21,7 @@ namespace Project.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("Project.Models.Complaint", b =>
+            modelBuilder.Entity("UniComplaint.Models.Complaint", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -47,7 +47,7 @@ namespace Project.Migrations
                     b.ToTable("Complaints");
                 });
 
-            modelBuilder.Entity("Project.Models.User", b =>
+            modelBuilder.Entity("UniComplaint.Models.User", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -72,9 +72,9 @@ namespace Project.Migrations
                     b.ToTable("Users");
                 });
 
-            modelBuilder.Entity("Project.Models.Complaint", b =>
+            modelBuilder.Entity("UniComplaint.Models.Complaint", b =>
                 {
-                    b.HasOne("Project.Models.User", "User")
+                    b.HasOne("UniComplaint.Models.User", "User")
                         .WithMany("Complaints")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -83,7 +83,7 @@ namespace Project.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("Project.Models.User", b =>
+            modelBuilder.Entity("UniComplaint.Models.User", b =>
                 {
                     b.Navigation("Complaints");
                 });

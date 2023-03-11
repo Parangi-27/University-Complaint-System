@@ -1,4 +1,4 @@
-namespace Project
+namespace UniComplaint
 {
     public class WeatherForecast
     {

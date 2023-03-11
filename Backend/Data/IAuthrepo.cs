@@ -1,6 +1,6 @@
-﻿using Project.Models;
+﻿using UniComplaint.Models;
 
-namespace Project.Data
+namespace UniComplaint.Data
 {
     public interface IAuthrepo
     {

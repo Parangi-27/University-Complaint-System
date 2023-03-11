@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace Project.Controllers
+namespace UniComplaint.Controllers
 {
     [ApiController]
     [Route("[controller]")]

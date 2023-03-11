@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Project.Data;
-using Project.Models;
+using UniComplaint.Data;
+using UniComplaint.Models;
 
-namespace BlogPost.Controllers
+namespace UniComplaint.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

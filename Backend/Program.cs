@@ -1,12 +1,12 @@
-using Microsoft.EntityFrameworkCore;
-using Microsoft.OpenApi.Models;
-using Project.Data;
-using Project.Models;
+using System.Xml.Linq;
+using UniComplaint.Data;
+using UniComplaint.Models;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Swashbuckle.AspNetCore.Filters;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using UniComplaint.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,10 +14,11 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddScoped<IAuthrepo, AuthRepo>();
 
 
-builder.Services.AddDbContext<ComplaintDbContext>(opt => opt.UseSqlServer(@"Server=(localdb)\MSSQLLocalDB;Database=Complain;Trusted_Connection=True"));
+builder.Services.AddDbContext<ComplaintDbContext>(opt => opt.UseSqlServer(@"Server=(localdb)\MSSQLLocalDB;Database=UniversityComp;Trusted_Connection=True"));
 builder.Services.AddCors(c => { c.AddPolicy("AllowOrigin", options => options.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader()); });
 builder.Services.AddControllers();
-
+/*builder.Services.AddDbContext<BlogContext>(opt =>
+        opt.UseInMemoryDatabase("blogpost"));*/
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
