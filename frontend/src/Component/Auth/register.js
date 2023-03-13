@@ -1,9 +1,12 @@
 import React from "react";
-import { useState, axios } from "react";
+import { useState } from "react";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 import here from "./img7.jpg";
 import styles from "./register.css";
 
 const Register = () => {
+  const nav = useNavigate();
   const [data, setData] = useState({ username: "", password: "" });
 
   const handleChange = ({ currentTarget: input }) => {
@@ -12,17 +15,29 @@ const Register = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    const { username, password } = data;
-    console.log(data);
-
-    if (username === "" || password === "") alert("Filled required");
+    const {username, password} = data;
+    if (data.username === "" || data.password === "") alert("Filled required");
     else {
+      console.log("outside try");
       try {
-        const url = "https://localhost:7261/api/Auth/Register";
-        const res = await axios.post(url, data);
-        console.log(res.data);
-        alert("Yesss");
+        console.log("inside try");
+        const data = await fetch('https://localhost:7153/api/Auth/Register',{
+            method: "POST",
+          withCredentials: true,
+          Credentials:"include",
+          headers:{
+              "Content-Type": "application/json",
+              'Access-Control-Allow-Origin': '*'
+          },
+          body:JSON.stringify({
+              username, password
+          })
+        });
+        localStorage.setItem('username',res.username);
+        const res = data;
+        if(res.status === 200)
+            console.log("Success");
+        window.alert("You successfully registerd")
       } catch (error) {
         console.log(error);
       }
@@ -31,17 +46,16 @@ const Register = () => {
 
   return (
     <>
-      <form className="register-form">
+      <form className="register-form" onSubmit={handleSubmit}>
         <div className="register__right">
           <center>
             <h1>UniGrievances</h1>
           </center>
           <h3>Register to your account</h3>
-          {/* <h6>Remember that the name you choose should reflect the values and mission of your university, as well as the purpose of the complaint management system. Consider brainstorming with your team to come up with a name that is unique, memorable, and easy to understand.</h6> */}
           <input
             type="text"
             placeholder="Username"
-            name="userName"
+            name="username"
             onChange={handleChange}
             value={data.username}
             required
@@ -58,7 +72,7 @@ const Register = () => {
           <br />
           <button type="submit">Register</button>
         </div>
-      <img src={here} className="register__img"></img>
+        <img src={here} className="register__img"></img>
       </form>
     </>
   );
