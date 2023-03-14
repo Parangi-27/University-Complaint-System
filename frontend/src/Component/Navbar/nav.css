@@ -1,12 +1,15 @@
-@import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,700');
+/* @import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,700'); */
 /* Navbar section */
 
 .nav {
     width: 100%;
-    height: 65px;
+    height: 55px;
     position: fixed;
     line-height: 65px;
     text-align: center;
+    /* background-color:  #000033;   */
+    margin-top: -1.5rem;  
+    /* border-bottom: solid #000066; */
 }
 
 .nav div.logo {
@@ -19,7 +22,7 @@
 .nav div.logo a {
     text-decoration: none;
     color: #fff;
-    font-size: 2.5rem;
+    font-size: 1.6rem;
 }
 
 .nav div.logo a:hover {
@@ -51,7 +54,8 @@
     text-decoration: none;
     color: #fff;
     line-height: 65px;
-    font-size: 2.4rem;
+    font-size: 1.3rem;
+    align-items: center;
 }
 
 .nav div.main_list ul li a:hover {
@@ -129,7 +133,7 @@
     .nav div.main_list ul li a {
         text-align: center;
         width: 100%;
-        font-size: 3rem;
+        font-size:1rem;
         padding: 20px;
     }
 
@@ -363,7 +367,7 @@
 
 .myH2 {
     text-align: center;
-    font-size: 4rem;
+    font-size: 0.5rem;
 }
 
 .myP {
