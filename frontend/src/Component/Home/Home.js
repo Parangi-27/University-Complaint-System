@@ -8,7 +8,14 @@ function Home() {
   return (
     <>
       <h2></h2>
-      <Navbar /> 
+      <Navbar />
+      <br /> 
+      <br /> 
+      <br /> 
+      <br /> 
+      <br />
+      <Card /> 
+      <Card /> 
     </>
   )
 }
