@@ -1,5 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
+import { TextField } from "@mui/material";
+import "./complain.css";
 
 const AddComplain = () => {
   const storage = localStorage.getItem("usertoken");
@@ -19,7 +21,7 @@ const AddComplain = () => {
     console.log(data);
   };
 
-  const handlesubmit = async (e) => {
+  const handleSubmit = async (e) => {
     const { title, complain } = data;
     e.preventDefault();
     try {
@@ -38,27 +40,39 @@ const AddComplain = () => {
     }
   };
   return (
-    <div>
-      <form onSubmit={handlesubmit}>
-        <span>title</span>
-        <input
-          type="text"
-          name="title"
-          required
-          value={data.title}
-          onChange={handleChange}
-        />
-        <span>complain</span>
-        <input
-          type="textarea"
-          name="complain"
-          required
-          value={data.complain}
-          onChange={handleChange}
-        />
-        <button type="submit"> submit</button>
+    <>
+      <form className="complain" onSubmit={handleSubmit}>
+        <div className="center">
+          <center>
+            <h1>Raise Complaint!</h1>
+          </center>
+          <TextField id="standard-basic" label="Title" />
+        </div>
+        <button type="submit">Login</button>
       </form>
-    </div>
+    </>
+    // <div>
+    //   <br></br>
+    //   <form onSubmit={handlesubmit}className="complain">
+    //     <span>title</span>
+    //     <input
+    //       type="text"
+    //       name="title"
+    //       required
+    //       value={data.title}
+    //       onChange={handleChange}
+    //     />
+    //     <span>complain</span>
+    //     <input
+    //       type="textarea"
+    //       name="complain"
+    //       required
+    //       value={data.complain}
+    //       onChange={handleChange}
+    //     />
+    //     <button type="submit"> submit</button>
+    //   </form>
+    // </div>
   );
 };
 

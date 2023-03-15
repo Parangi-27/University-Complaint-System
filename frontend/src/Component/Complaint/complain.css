@@ -1,0 +1,49 @@
+.complain {
+    width: 70vh;
+    height: 40vh;
+    margin: 20vh auto;
+    padding: 5vh;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1),
+        0px 0px 10px rgba(0, 0, 0, 0.2),
+        0px 0px 15px rgba(0, 0, 0, 0.3);
+}
+
+.complain .center {
+    margin: 25px;
+    padding: auto;
+}
+
+.complain h4 {
+    /* margin-left: 20px; */
+}
+
+.complain input {
+    padding: 7px;
+    /* margin-left: 20vh; */
+    align-items: center;
+    /* margin-bottom: 2vh; */
+    border: 1px solid #000;
+    border-radius: 5px;
+    background-color: #fff;
+}
+.complain textarea {
+    padding: 7px;
+    margin-left: 20vh;
+    align-items: center;
+    /* margin-bottom: 2vh; */
+    border: 1px solid #000;
+    border-radius: 5px;
+    background-color: #fff;
+}
+#standard-basic{
+  border: none;
+}
+.complain TextField{
+  border: none;
+}
+.complain label{
+  padding: 1px;
+}
