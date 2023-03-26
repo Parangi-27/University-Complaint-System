@@ -20,7 +20,6 @@ const Login = () => {
   
     const handleSubmit = async(e) => {
       e.preventDefault();
-  
       const {username, password} = data;
       console.log(data)
       if(username === "" || password === ""){
@@ -39,20 +38,16 @@ const Login = () => {
                   username, password
               })
           });
-  
           const res = data.json();
           res.then(function(result) {
             console.log("////") 
-
             console.log(result) 
-            
-            // window.alert("yeahhhh")
+
             if(result.status === 200){
               localStorage.setItem('usertoken', result.token)
               navigate('/home')
               console.log("Yeeeyyy")
-            }
-  
+            } 
          })
          .catch(error => {
           console.log(error)

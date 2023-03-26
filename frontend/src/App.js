@@ -3,6 +3,7 @@ import Login from "./Component/Auth/Login";
 import Register from "./Component/Auth/Register";
 import Home from "./Component/Home/Home";
 import Complain from "./Component/Complaint/Complain";
+import Admin from "./Component/Admin/index"
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
 			<Route path="/register" exact element={<Register />} />
 			<Route path="/home" exact element={<Home/>} />
 			<Route path="/complain" exact element={<Complain/>} />
+			<Route path="/admin" exact element={<Admin/>} />
 			</Routes>
 	);
 }

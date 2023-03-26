@@ -13,6 +13,7 @@ const AddComplain = () => {
     title: "",
     complain: "",
     userId: uid,
+    resolve: "false",
   });
   const handleChange = async (event) => {
     const name = event.target.name;
@@ -22,20 +23,19 @@ const AddComplain = () => {
   };
 
   const handleSubmit = async (e) => {
-    const { title, complain } = data;
+    const { title, complain,userId, resolve } = data;
     e.preventDefault();
     try {
       const d = axios.post("https://localhost:7153/api/Complaints", {
         title,
         complain,
-        uid,
+        userId
       });
       console.log("pppppp");
       console.log(d);
-      const u = d.data;
-      console.log(u);
+      console.log(d.data);
       window.alert("yesss");
-    } catch (e) {
+    } catch (e) { 
       console.log(e);
     }
   };
@@ -46,33 +46,13 @@ const AddComplain = () => {
           <center>
             <h1>Raise Complaint!</h1>
           </center>
-          <TextField id="standard-basic" label="Title" />
+          <TextField name="title" onChange={handleChange} id="standard-basic" label="Title" /><br/><br/>
+          <TextField name="complain" onChange={handleChange} id="standard-basic" label="Description" />
         </div>
-        <button type="submit">Login</button>
+        <button type="submit">Complain</button>
       </form>
     </>
-    // <div>
-    //   <br></br>
-    //   <form onSubmit={handlesubmit}className="complain">
-    //     <span>title</span>
-    //     <input
-    //       type="text"
-    //       name="title"
-    //       required
-    //       value={data.title}
-    //       onChange={handleChange}
-    //     />
-    //     <span>complain</span>
-    //     <input
-    //       type="textarea"
-    //       name="complain"
-    //       required
-    //       value={data.complain}
-    //       onChange={handleChange}
-    //     />
-    //     <button type="submit"> submit</button>
-    //   </form>
-    // </div>
+
   );
 };
 

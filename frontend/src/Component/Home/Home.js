@@ -15,7 +15,6 @@ function Home() {
       <br /> 
       <br />
       <Card /> 
-      <Card /> 
     </>
   )
 }

@@ -1,17 +1,37 @@
-import React from 'react'
+import React from "react";
 import cardImg from "./cImage.png";
-import './card.css'
+import { useEffect, useState } from "react";
+import axios from "axios";
+import "./card.css";
 
 function Card() {
+  const [post, setPost] = useState({
+    g: [],
+  });
+  useEffect(() => {
+    axios.get("https://localhost:7153/api/Complaints").then(
+      (res) => {
+        setPost({ g: res.data });
+        console.log(res.data);
+      },
+      (error) => {
+        console.log("error in fetching");
+      }
+    );
+  }, []);
   return (
     <>
-        <div className='card'>
-        <img src={cardImg} className="card__img"></img>
-        <h3>This is title</h3>
-        <h6>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</h6>
-        </div>
-    </>    
-  )
+        {post.g.map((add, i) => (
+          <div className="card" key={i}>
+              <img src={cardImg} className="card__img"></img>
+              <div >
+                <h3>{add.title}</h3>
+                <h6>{add.complain}</h6>
+              </div>
+          </div>
+         ))}
+    </>
+  );
 }
 
-export default Card
+export default Card;
