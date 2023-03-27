@@ -28,6 +28,7 @@ function Card() {
                 <h3>{add.title}</h3>
                 <h6>{add.complain}</h6>
               </div>
+              <h5 key={i+1}>{add.resolve}</h5>
           </div>
          ))}
     </>

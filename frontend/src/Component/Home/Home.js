@@ -1,14 +1,15 @@
 import React from 'react'
 import Navbar from '../Navbar'
 import Card from '../Card';
-
+import ResponsiveAppBar from '../Navbar';
 function Home() {
 
-  var user = localStorage.getItem("username");
+  var user = localStorage.getItem("usertoken");
+  console.log(user)
   return (
     <>
-      <h2></h2>
-      <Navbar />
+      
+      <ResponsiveAppBar usern={user} />
       <br /> 
       <br /> 
       <br /> 
