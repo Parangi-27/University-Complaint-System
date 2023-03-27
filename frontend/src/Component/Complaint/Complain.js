@@ -1,9 +1,13 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { TextField } from "@mui/material";
+import { Navigate } from 'react-router-dom';
 import "./complain.css";
 
 const AddComplain = () => {
+  if(localStorage.getItem('admintoken') != null) {
+    Navigate('*');
+  }
   const storage = localStorage.getItem("usertoken");
   const arr = storage.split("/");
   const token = arr[0];

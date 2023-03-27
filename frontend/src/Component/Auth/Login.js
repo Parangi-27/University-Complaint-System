@@ -25,6 +25,11 @@ const Login = () => {
       if(username === "" || password === ""){
         console.log("Required!!!")
       }
+      else if(username === "adminHere" && password === "Admin@123"){
+        localStorage.setItem('admintoken', "adminHere")
+        navigate('/admin')
+        console.log("Yeeeyyy Admin")
+      }
       else{
         const data = await fetch('https://localhost:7153/api/Auth/Login', {
               method: "POST",
@@ -47,7 +52,8 @@ const Login = () => {
               localStorage.setItem('usertoken', result.token)
               navigate('/home')
               console.log("Yeeeyyy")
-            } 
+            }
+            
          })
          .catch(error => {
           console.log(error)
