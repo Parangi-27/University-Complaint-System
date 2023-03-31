@@ -1,6 +1,6 @@
 .complain {
-    width: 70vh;
-    height: 40vh;
+    max-width: 70vh;
+    max-height: 100vh;
     margin: 20vh auto;
     padding: 5vh;
     align-items: center;
@@ -10,11 +10,11 @@
         0px 0px 10px rgba(0, 0, 0, 0.2),
         0px 0px 15px rgba(0, 0, 0, 0.3);
 }
-
 .complain .center {
     margin: 25px;
     padding: auto;
 }
+
 
 .complain h4 {
     /* margin-left: 20px; */

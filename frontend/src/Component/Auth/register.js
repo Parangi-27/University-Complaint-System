@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import Button from "../Button";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import here from "./img7.jpg";
@@ -49,7 +50,7 @@ const Register = () => {
       <form className="register-form" onSubmit={handleSubmit}>
         <div className="register__right">
           <center>
-            <h1>UniGrievances</h1>
+          <div className="font">DUComplaint</div>
           </center>
           <h3>Register to your account</h3>
           <input
@@ -70,7 +71,8 @@ const Register = () => {
             required
           />
           <br />
-          <button type="submit">Register</button>
+          {/* <button type="submit">Register</button> */}
+          <Button name="Register" ></Button>
         </div>
         <img src={here} className="register__img"></img>
       </form>

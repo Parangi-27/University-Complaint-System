@@ -4,7 +4,8 @@ import Register from "./Component/Auth/Register";
 import Home from "./Component/Home/Home";
 import Complain from "./Component/Complaint/Complain";
 import Admin from "./Component/Admin/index"
-import Error from "./Error/Error.js"
+import Userprofile from "./Component/Userprofile";
+// import Error from "./Error/Error.js"
 function App() {
 
 	return (
@@ -14,9 +15,11 @@ function App() {
 			<Route path="/login" exact element={<Login />} />
 			<Route path="/register" exact element={<Register />} />
 			<Route path="/" exact element={<Home/>} />
+			<Route path="/home" exact element={<Home/>} />
 			<Route path="/complain" exact element={<Complain/>} />
 			<Route path="/admin" exact element={<Admin/>} />
-			<Route path="*" exact element={<Error/>} />
+			<Route path="/userpro" exact element={<Userprofile/>} />
+			{/* <Route path="*" exact element={<Error/>} /> */}
 			</Routes>
 	);
 }

@@ -1,23 +1,27 @@
 import axios from "axios";
 import React, { useState } from "react";
+import Button from "../Button";
 import { TextField } from "@mui/material";
-import { Navigate } from 'react-router-dom';
+import { Navigate } from "react-router-dom";
 import "./complain.css";
 
 const AddComplain = () => {
-  if(localStorage.getItem('admintoken') != null) {
-    Navigate('*');
-  }
+  
   const storage = localStorage.getItem("usertoken");
   const arr = storage.split("/");
   const token = arr[0];
   const uid = arr[1];
-  console.log(uid);
+  // console.log(uid);
+  const date = new Date();
+  // console.log(date);
+
   const [data, setdata] = useState({
     title: "",
     complain: "",
     userId: uid,
     resolve: "false",
+    PublishDate: date,
+    comment: "",
   });
   const handleChange = async (event) => {
     const name = event.target.name;
@@ -27,36 +31,50 @@ const AddComplain = () => {
   };
 
   const handleSubmit = async (e) => {
-    const { title, complain,userId, resolve } = data;
+    const { title, complain, userId, resolve } = data;
     e.preventDefault();
     try {
       const d = axios.post("https://localhost:7153/api/Complaints", {
         title,
         complain,
-        userId
+        userId,
       });
       console.log("pppppp");
       console.log(d);
       console.log(d.data);
       window.alert("yesss");
-    } catch (e) { 
+    } catch (e) {
       console.log(e);
     }
+
+    
   };
   return (
     <>
       <form className="complain" onSubmit={handleSubmit}>
         <div className="center">
           <center>
-            <h1>Raise Complaint!</h1>
+            <div className="font">Raise Your Complaint</div>
           </center>
-          <TextField name="title" onChange={handleChange} id="standard-basic" label="Title" /><br/><br/>
-          <TextField name="complain" onChange={handleChange} id="standard-basic" label="Description" />
+          <TextField
+            name="title"
+            onChange={handleChange}
+            id="standard-basic"
+            label="Title"
+          />
+          <br />
+          <br />
+          <TextField
+            name="complain"
+            onChange={handleChange}
+            id="standard-basic"
+            label="Description"
+          />
         </div>
-        <button type="submit">Complain</button>
+        {/* <button type="submit">Complain</button> */}
+        <Button name="Post Complaint"></Button>
       </form>
     </>
-
   );
 };
 

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -24,6 +25,10 @@ namespace UniComplaint.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Complaint>>> GetComplaints()
         {
+          if (_context.Complaints == null)
+          {
+              return NotFound();
+          }
             return await _context.Complaints.ToListAsync();
         }
 
@@ -31,6 +36,10 @@ namespace UniComplaint.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<Complaint>> GetComplaint(int id)
         {
+          if (_context.Complaints == null)
+          {
+              return NotFound();
+          }
             var complaint = await _context.Complaints.FindAsync(id);
 
             if (complaint == null)
@@ -40,7 +49,13 @@ namespace UniComplaint.Controllers
 
             return complaint;
         }
-
+        // get complain by user id
+        [AllowAnonymous]
+        [HttpGet("/Complaints/{id}")]
+        public async Task<ActionResult<IEnumerable<Complaint>>> GetComplaintById(long id)
+        {
+            return await _context.Complaints.Where(x => x.UserId == id).ToListAsync();
+        }
         // PUT: api/Complaints/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
@@ -77,6 +92,10 @@ namespace UniComplaint.Controllers
         [HttpPost]
         public async Task<ActionResult<Complaint>> PostComplaint(Complaint complaint)
         {
+          if (_context.Complaints == null)
+          {
+              return Problem("Entity set 'ComplaintDbContext.Complaints'  is null.");
+          }
             _context.Complaints.Add(complaint);
             await _context.SaveChangesAsync();
 
@@ -87,6 +106,10 @@ namespace UniComplaint.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteComplaint(int id)
         {
+            if (_context.Complaints == null)
+            {
+                return NotFound();
+            }
             var complaint = await _context.Complaints.FindAsync(id);
             if (complaint == null)
             {
@@ -101,7 +124,7 @@ namespace UniComplaint.Controllers
 
         private bool ComplaintExists(int id)
         {
-            return _context.Complaints.Any(e => e.Id == id);
+            return (_context.Complaints?.Any(e => e.Id == id)).GetValueOrDefault();
         }
     }
 }

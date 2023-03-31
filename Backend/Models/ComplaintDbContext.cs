@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using UniComplaint.Models;
 
 namespace UniComplaint.Models
 {
@@ -20,5 +21,8 @@ namespace UniComplaint.Models
         public DbSet<User> Users => Set<User>();
 
         public DbSet<Complaint> Complaints => Set<Complaint>();
+        public DbSet<Comment> Comment => Set<Comment>();
+
+        //public DbSet<UniComplaint.Models.Comment>? Comment { get; set; }
     }
 }
