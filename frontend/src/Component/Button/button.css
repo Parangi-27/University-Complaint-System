@@ -8,7 +8,8 @@
     /* float: right; */
     display: block;
     margin-top: 30px;
-    margin-left: 20vh;
+    align-items: center;
+    margin-right: 20vh;
     width: 100%;
     max-width: 190px;
 }

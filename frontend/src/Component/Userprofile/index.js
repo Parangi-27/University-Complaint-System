@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
 import user from "./4.png";
+import './userpro.css'
 
 function Userprofile() {
   const userInfo = localStorage.getItem("usertoken");
@@ -48,7 +49,7 @@ function Userprofile() {
   }, []);
   return (
     <>
-      <div>{user}</div>
+      <div className="font">{user}</div>
       {ucomp.g.map((add, i) => (
         <div
           class="h-screen overflow-hidden flex items-center justify-center"

@@ -23,9 +23,9 @@ namespace UniComplaint.Models
 
         public bool resolve { get; set; } = false;
         public int UserId { get; set; }
-        public DateTime PublishDate { get; set; }
-        //public Comment? Comment { get; set; }
+        public DateTime CreatedDate { get; set; }
 
+        public List<Comment>? Comments { get; set; }
         [JsonIgnore]
         public User? User { get; set; }
     }

@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace UniComplaint.Models
 {
@@ -6,7 +7,10 @@ namespace UniComplaint.Models
     {
         [Key]
         public int Id { get; set; }
+        public string Text { get; set; }
+       
         public int c_id { get; set; }
-        public string CommentDes { get; set; }
+        public Complaint? Complaint { get; set; }   
+
     }
 }

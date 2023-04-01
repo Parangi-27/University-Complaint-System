@@ -14,7 +14,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddScoped<IAuthrepo, AuthRepo>();
 
 
-builder.Services.AddDbContext<ComplaintDbContext>(opt => opt.UseSqlServer(@"Server=(localdb)\MSSQLLocalDB;Database=UniversityComp;Trusted_Connection=True"));
+builder.Services.AddDbContext<ComplaintDbContext>(opt => opt.UseSqlServer(@"Server=(localdb)\MSSQLLocalDB;Database=UniComp;Trusted_Connection=True"));
 builder.Services.AddCors(c => { c.AddPolicy("AllowOrigin", options => options.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader()); });
 builder.Services.AddControllers();
 /*builder.Services.AddDbContext<BlogContext>(opt =>

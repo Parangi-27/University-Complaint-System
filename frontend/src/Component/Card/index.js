@@ -95,6 +95,9 @@ function Card() {
                 <p class="md:text-lg text-gray-500 text-base">
                   {add.complain}
                 </p>
+                <p class="md:text-lg text-gray-500 text-base">
+                  {add.PublishDate}
+                </p>
                 {/* <p class="text-xl font-black text-gray-800">
                   $110
                   <span class="font-normal text-gray-600 text-base">/night</span>

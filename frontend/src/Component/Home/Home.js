@@ -28,7 +28,7 @@ function Home() {
         <br />
         <h1>DU<span>Complaint</span></h1>
         <h2>Raise Your Complaint!</h2>
-        <Button name="Login" />
+        <Button name="Complaint" />
       </div>
       <div>
         <Card />
