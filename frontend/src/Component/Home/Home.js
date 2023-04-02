@@ -1,8 +1,6 @@
 import React from "react";
-import Navbar from "../Navbar";
 import Card from "../Card";
-import Card2 from "../Card2";
-import ResponsiveAppBar from "../Navbar";
+import Navbar from "../Nav";
 import { Navigate } from "react-router-dom";
 import Button from "../Button";
 import bg from "./5.png";
@@ -17,6 +15,7 @@ function Home() {
     backgroundColor:"#0c162c",
     height: "100vh",
     fontSize: "20px",
+    fontWeight:"bold",
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
   };
@@ -24,11 +23,12 @@ function Home() {
   return (
     <>
       <div style={myStyle}>
+        {/* <Navbar/> */}
         <br />
         <br />
-        <h1>DU<span>Complaint</span></h1>
+        <h1>Du<span>Complaint</span></h1>
         <h2>Raise Your Complaint!</h2>
-        <Button name="Complaint" />
+        <Button name="Complaint"></Button>
       </div>
       <div>
         <Card />

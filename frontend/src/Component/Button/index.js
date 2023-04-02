@@ -1,10 +1,10 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import './button.css'
 const Button = ({ name = "name", onClick }) => {
+  const Nav = useNavigate();
   const onButtonClick = () => {
-    if (onClick) {
-      onClick(name);
-    }
+    Nav("/complain");
   };
   return (
     <>

@@ -4,10 +4,6 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700,900&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700,900|Righteous&display=swap');
 
-*{
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-}
 h1, h2, h3, h4, h5, h6{
   font-family: 'Poppins', sans-serif;
   font-weight: normal;
@@ -23,5 +19,5 @@ h2{
   margin-left: 20vh;
 }
 span{
-  color: #f8bc00;
+  color: orange;
 }

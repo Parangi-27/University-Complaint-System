@@ -5,11 +5,11 @@
     text-transform: uppercase;
     color: #fff;
     padding: 13px 0px;
-    /* float: right; */
+    float: right;
     display: block;
-    margin-top: 30px;
+    margin-top: 5rem;
     align-items: center;
-    margin-right: 20vh;
+    margin-right: 67rem;
     width: 100%;
     max-width: 190px;
 }

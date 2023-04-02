@@ -58,8 +58,6 @@ const Login = () => {
         .catch((error) => {
           console.log(error);
         });
-
-      // console.log(res)
     }
   };
   return (
@@ -89,11 +87,9 @@ const Login = () => {
               required
             />
             <br />
-            <button className="btn"> Login</button>
-            <br />
-            <br />
+            <button className="btn">Login</button>
             <center>
-            <h6>Don't have an account? <NavLink to='/Register'>SignUp</NavLink></h6>
+            <h6>Don't have an account? <NavLink to='./Register.js'>SignUp</NavLink></h6>
             </center>
             <br />
           </div>

@@ -2,8 +2,8 @@ import React from "react";
 import { useState } from "react";
 import Button from "../Button";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
-import here from "./img7.jpg";
+import { useNavigate, NavLink } from "react-router-dom";
+import here from "./logImg2.png";
 import styles from "./register.css";
 
 const Register = () => {
@@ -47,7 +47,41 @@ const Register = () => {
 
   return (
     <>
-      <form className="register-form" onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="form_register">
+          <img src={here} alt="image" className="image"></img>
+          <div className="contentR">
+            <center>
+              <div className="fontR">DuComplaint</div>
+              <div className="fontR2">Register</div>
+            </center>
+            <input
+              type="text"
+              placeholder="Username"
+              name="username"
+              onChange={handleChange}
+              value={data.username}
+              required
+            />
+            <br></br>
+            <input
+              type="password"
+              placeholder="Password"
+              name="password"
+              onChange={handleChange}
+              value={data.password}
+              required
+            />
+            <br />
+            <button className="btnR">Register</button>
+            <br />
+            <br />
+            <center>
+            <h6>Already have an account?&nbsp;<NavLink to='/Login'>Login</NavLink>&nbsp;here</h6>
+            </center>
+            <br />
+          </div>
+        </form>
+      {/* <form className="register-form" onSubmit={handleSubmit}>
         <div className="register__right">
           <center>
           <div className="font">DUComplaint</div>
@@ -71,11 +105,11 @@ const Register = () => {
             required
           />
           <br />
-          {/* <button type="submit">Register</button> */}
+         
           <Button name="Register" ></Button>
         </div>
         <img src={here} className="register__img"></img>
-      </form>
+      </form> */}
     </>
   );
 };

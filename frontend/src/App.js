@@ -1,8 +1,8 @@
 import { Route, Routes, Navigate } from "react-router-dom";
 import Login from "./Component/Auth/Login";
+import Complain from "./Component/Complaint";
 import Register from "./Component/Auth/Register";
 import Home from "./Component/Home/Home";
-import Complain from "./Component/Complaint/Complain";
 import Admin from "./Component/Admin/index"
 import Userprofile from "./Component/Userprofile";
 // import Error from "./Error/Error.js"

@@ -1,5 +1,93 @@
-.complain {
-    max-width: 70vh;
+.login-form {
+  max-width: 110vh;
+  height: 60vh;
+  margin: 20vh auto;
+  padding: 5vh;
+  display: flex;
+  align-items: center;
+  background-color: #0c162c;
+  /* border-radius: 10px; */
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1), 
+  0px 0px 10px rgba(0, 0, 0, 0.2), 
+  0px 0px 15px rgba(0, 0, 0, 0.3);
+}
+.fontC{
+  font-size: 30px;
+  font-family: 'Poppins', sans-serif;
+  margin-right: 70rem;
+  font-weight: 600;
+  color: white;
+}
+.login__img{
+  max-width: 100%;
+  max-height: 100%;
+  width: 50rem;
+  height: 50rem;
+  margin: 2rem;
+}
+.login__right{
+  display: block;
+}
+.login-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.login-form h3 {
+  color: orangered;
+  /* text-align: center; */
+  display: flex;
+  margin-bottom: 20px;
+}
+.login__right h1 {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.login-form form {
+  padding: 200px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form input {
+  padding: 10px;
+  max-width: 40vh;
+  /* margin-left: 12vh; */
+  margin-bottom: 2vh;
+  border: 1px solid #000;
+  border-radius: 5px;
+  border-color: grey;
+  color:#fff;
+  background-color: #0c162c;
+}
+
+.login-form button {
+  font-size: 17px;
+  transition: ease-in all 0.5s;
+  background-color: gray;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 10px 0px;
+  /* float: right; */
+  display: block;
+  margin-top: 30px;
+  /* margin-left: 20vh; */
+  width: 100%;
+  max-width: 150px;
+}
+
+.login-form button:hover {
+  background-color: #fe572f;
+  transition: ease-in all 0.5s;
+  color: #fff;
+  border-radius: 26px;
+}
+
+/* .complain {
+    max-width: 50rem;
     max-height: 100vh;
     margin: 20vh auto;
     padding: 5vh;
@@ -10,9 +98,14 @@
         0px 0px 10px rgba(0, 0, 0, 0.2),
         0px 0px 15px rgba(0, 0, 0, 0.3);
 }
+.complain img{
+  height: 20rem;
+  width: 20rem;
+  float: left;
+}
 .complain .center {
-    margin: 25px;
     padding: auto;
+    float: right;
 }
 .font{
   font-size: 2rem;
@@ -21,15 +114,11 @@
   display: inline;
 }
 
-.complain h4 {
-    /* margin-left: 20px; */
-}
+
 
 .complain input {
     padding: 7px;
-    /* margin-left: 20vh; */
     align-items: center;
-    /* margin-bottom: 2vh; */
     border: 1px solid #000;
     border-radius: 5px;
     background-color: #fff;
@@ -38,7 +127,6 @@
     padding: 7px;
     margin-left: 20vh;
     align-items: center;
-    /* margin-bottom: 2vh; */
     border: 1px solid #000;
     border-radius: 5px;
     background-color: #fff;
@@ -59,7 +147,6 @@ button{
     text-transform: uppercase;
     color: #fff;
     padding: 13px 0px;
-    /* float: right; */
     display: block;
     margin-top: 30px;
     margin-left: 20vh;
@@ -71,4 +158,4 @@ button:hover{
   transition: ease-in all 0.5s;
   color: #fff;
   border-radius: 26px;
-}
+}  */

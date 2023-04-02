@@ -4,84 +4,108 @@
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 } */
 
-.login-form {
-    max-width: 110vh;
-    height: 60vh;
-    margin: 20vh auto;
-    padding: 5vh;
-    display: flex;
+.form_login{
     align-items: center;
-    background-color: #fff;
-    /* border-radius: 10px; */
+    position: relative;
+    margin: 1rem auto !important;
+    padding: 0;
+    background-color: #0c162c;
+    max-width: 24rem;
+    max-height: 40rem;
+    height: 100%;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1), 
     0px 0px 10px rgba(0, 0, 0, 0.2), 
     0px 0px 15px rgba(0, 0, 0, 0.3);
 }
-.font{
-    font-size: 2rem;
-    font-family: 'Poppins', sans-serif;
-    margin-right: 25vh;
+img{
+    margin:0;
+    padding:0;
+    max-height: 50rem;
+    max-width: 24rem;
+    margin-bottom: -9rem;
 }
-.login__img{
-    float: left;
-    width: 300px;
-    height: 300px;
-}
-.login__right{
-    display: block;
-}
-.login-form h2 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-.login-form h3 {
-    color: #2d9184;
-    /* text-align: center; */
-    display: flex;
-    margin-bottom: 20px;
-}
-.login__right h1 {
-    text-align: center;
-    display: flex;
+.form_login .content input{
+    border-radius: 0.6rem;
+    border-width: 0.1rem;
+    border-color: grey;
+    margin: 0.85rem;
+    padding: 0.5rem;
+    right: -1.8rem;
     align-items: center;
-    margin-bottom: 20px;
+    position: relative;
+    color: #fff;
+    background-color: #0c162c;
 }
-
-.login-form form {
-    padding: 200px;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
+.form_login .content input:focus{
+    border-color: orange;
 }
-
-.login-form input {
-    padding: 10px;
-    max-width: 40vh;
-    /* margin-left: 12vh; */
-    margin-bottom: 2vh;
-    border: 1px solid #000;
+.content h3{
+    margin-top: 2vh;
+    margin-right: 20vh;
+    font-size: 25px;
+    top: -50vh;
+    /* border-bottom: 5px solid red; */
+}
+.content span{
+    border-bottom: 1px solid black; /* change black to your desired border color */
+    display: inline-block; /* this is*/
+}
+.content hr{
+    size: 2px;
     border-radius: 5px;
-    background-color: #fff;
 }
-
-.login-form button {
-    font-size: 17px;
+.content{
+    margin: 2vh 2vh;
+    align-items: center;
+    display:inline-flexbox;
+    position: relative;
+}
+.content .font{
+    position: absolute;
+    font-size: 35px;
+    top: -9rem;
+    right: -7rem;
+    left: auto;
+    color: aliceblue;
+    font-weight: 600;
+}
+.content .font2{
+    margin-top: -2rem;
+    /* margin: 0.5rem; */
+    font-size: 30px;
+    text-decoration: underline;
+    text-decoration-color: orange;
+    text-underline-offset: 5px;
+    text-underline-position: below;
+    right: 25vh;
+    left: auto;
+    color: white;
+    font-weight: 400;
+}
+.content .btn{
+    font-size: 16px;
     transition: ease-in all 0.5s;
     background-color: gray;
     text-transform: uppercase;
     color: #fff;
-    padding: 10px 0px;
-    /* float: right; */
+    padding: 8px 0px;
+    border-radius: 2px;
     display: block;
-    margin-top: 30px;
-    /* margin-left: 20vh; */
+    margin-top: 2.2rem;
+    margin-bottom: 0.5rem;
+    align-items: center;
+    margin-left: 6.5rem;
     width: 100%;
-    max-width: 150px;
+    max-width: 10rem;
 }
-
-.login-form button:hover {
+.content .btn:hover{
     background-color: #fe572f;
     transition: ease-in all 0.5s;
     color: #fff;
     border-radius: 26px;
+}
+.form_login .content h6{
+    margin-top: -1rem;
+    margin-bottom: 1rem;
+    font-size: 15px;
 }
